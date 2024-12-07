@@ -1,0 +1,19 @@
+﻿@model Nimap_Company_Task.Models.Validations.ProductValidationClass
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm("create", "Home", FormMethod.Post))
+            {
+                <table>
+                    <tr><td>@Html.LabelFor(x => x.ProductID)</td><td>@Html.EditorFor(x => x.ProductID)</td><td>@Html.ValidationMessageFor(x => x.ProductID)</td></tr>
+
+                    <tr><td>@Html.LabelFor(x => x.ProductName)</td><td>@Html.EditorFor(x => x.ProductName)</td><td>@Html.ValidationMessageFor(x => x.ProductName)</td></tr>
+
+                    <tr><td>@Html.LabelFor(x => x.CategoryID)</td><td>@Html.EditorFor(x => x.CategoryID)</td><td>@Html.ValidationMessageFor(x => x.CategoryID)</td></tr>
+
+                    <tr><td colspan="3"><input type="submit" value="Submit" /></td></tr>
+                </table>
+            }
